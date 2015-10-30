@@ -1,0 +1,335 @@
+/***************************** login form *******************************/
+
+#loginForm div.list label.item, #transportForm div.list label.item, #vehicleForm div.list label.item {
+	background-color: @dsv-primary;	
+	border: none;
+	border-bottom: 1px solid white;
+	width: 65%;
+	display: inline-block;
+}
+#loginForm div.list {
+	width: 80%;
+	height: 40%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 1%;
+}
+#exitButton, #stopList {
+	color: white;
+	background-color: @dsv-primary;
+	border: none;
+	margin-top: @dpi_mult*5px;
+	width: 45%;
+}
+#username, #password {
+	color: white;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: @dpi_mult*30px;
+}
+#signInButton {
+	width: 45%;
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: @dsv-primary;
+	color: white;
+	margin-top: @dpi_mult*5px;
+}
+.logo-dsv  when (@rho = 1){
+	background-image: url('/../@{url-relative}/login/DSVlogo.png') !important;
+}
+.logo-dsv  when not (@rho = 1){
+	background-image: url('/@{url-relative}/login/DSVlogo.png') !important;
+}
+.logo-dsv{
+	background-repeat:no-repeat;
+   	background-size:contain;
+	margin-top: 20%;
+  	width: 50%;
+}
+#InitTabs.tabs-middle > .tabs {
+  top: 30% !important;
+  border-color: #ffffff !important;
+}
+
+.keyboard-open #InitTabs {
+    > .tabs {
+        top: 0% !important;
+    }
+
+    ion-content {
+        top: 15% !important;
+    }
+
+}
+
+#InitTabs ion-content {
+    background-color: @dsv-primary !important;
+}
+
+.login-content{
+  top: 40% !important;
+}
+
+span.fa-barcode{
+	color: @dsv-blue-4;
+	display: inline-block;
+}
+.green-check-icon{
+  color: #33CC33 !important;
+}
+
+#InitTabs .tab-nav {
+
+    .tab-item {
+      position: relative;
+      overflow: visible;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -14px;
+        z-index: 2;
+        border-width: 10px 14px 0;
+        border-color: #fff transparent transparent transparent;
+        border-style: solid;
+      }
+
+    }
+
+    .tab-item-active {
+      border-color: #ffffff !important;
+      color: @dsv-primary !important;
+      &:after {
+        display: block;
+      }
+    }
+
+    i {
+        height: auto;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        color: #FFF;
+        .ratio-value(24px);
+    }
+
+    .tab-title {
+        .ratio-value(17px);
+    }
+
+}
+
+
+// .arrow-tab-0::after{
+//  	content: "";
+//     position: absolute;
+//     top: 100%;
+//     z-index: 1000;
+//     border-top: 10px solid #ffffff;
+//     border-left: 14px solid transparent;
+//     border-right: 14px solid transparent;
+//     margin-left: -14px;
+//     left: 15%;
+// }
+// .arrow-tab-1::after{
+//  	content: "";
+//     position: absolute;
+//     top: 100%;
+//     z-index: 1000;
+//     border-top: 10px solid #ffffff;
+//     border-left: 14px solid transparent;
+//     border-right: 14px solid transparent;
+//     margin-left: -14px;
+//     left: 50%;
+// }
+// .arrow-tab-2::after{
+//  	content: "";
+//     position: absolute;
+//     top: 100%;
+//     z-index: 1000;
+//     border-top: 10px solid #ffffff;
+//     border-left: 14px solid transparent;
+//     border-right: 14px solid transparent;
+//     margin-left: -14px;
+//   	left: 80%;
+// }
+
+
+div.popup{
+  background-color:white;
+     opacity: 1;
+}
+div.popup-buttons{
+    bottom:10%;
+}
+button.button.button-light{
+  border-color: white;
+  color: @dsv-blue-4;
+  text-align: right;
+  padding-right:10%;
+}
+div.popup-body{
+  color:#5E6A71;
+  .ratio-value(15px) !important;
+}
+div.popup-head{
+  border-color: white;
+}
+.popup-title{
+    .ratio-value(16px) !important;
+}
+.popup{
+  width:80% !important;
+  border-radius: 5px !important;
+}
+
+.tab-vehicle-disabled{
+	color: @dsv-blue-4;
+	background-color: @dsv-primary;
+	border-color: @dsv-primary;
+	font-weight: bold;
+}
+.tab-vehicle-enabled{
+	color: white;
+	background-color: @dsv-blue-4;
+	border-color: @dsv-primary;
+    font-weight: bold;
+}
+ion-item.item {
+  border-bottom-color: @dsv-primary !important;
+  border-width: 2px !important;
+  height: 65px;
+}
+ion-item.tab-vehicle-disabled > p {
+	font-weight: normal !important;
+	color: @dsv-blue-4 !important;
+}
+ion-item.tab-vehicle-enabled > p {
+	font-weight: normal !important;
+	color:  @dsv-primary !important;
+}
+#vehicleSpinnerMessage{
+	color: @dsv-blue-4;
+	font-weight: 600;
+	.ratio-value(16px);
+	text-align:center;
+	padding-top:5%;
+}
+#vehicleSpinner > .spinner svg {
+	width: 19% !important;
+    height: 85px !important;
+    margin-left: 40%;
+    margin-top:20%;
+}
+.exitButton-vehicles{
+	margin-top: @dpi_mult*50px !important;
+}
+ion-item.activated {
+    border-color: transparent !important;
+    background-color: transparent !important; 
+}
+div.route-title{
+	color: @dsv-blue-4;
+	background-color: @dsv-primary;
+	border-color: @dsv-primary;
+	font-weight: bold;
+	padding-top: 10%;
+	text-align: center;
+	font-weight: 600;
+	.ratio-value(16px);
+}
+label.style-enabled{
+	color: white;
+	font-weight: bold;
+	vertical-align:top;
+}
+label.style-disabled{
+	color: @dsv-blue-4;
+	border-color: @dsv-primary;
+	vertical-align:top;
+}
+#transp-route-toggle{
+	padding-top: 5%;
+	padding-left: 2%;
+	padding-right: 2%;	
+	text-align: center;
+}
+.toggle input + .track {
+   background-color: #000040; 
+   color:  #000040; 
+   border-color:  #000040 !important;
+   height:20px;
+   align: center;
+   height:18px;
+   width: 150px;
+}
+.toggle input:checked + .track {
+   background-color:  #000040; 
+   color:  #000040; 
+   border-color: #000040 !important;
+}
+.handle{
+	border-color:  #000040 !important;
+	top:1px !important;
+}
+.toggle input:checked + .track .handle {
+	transform: translate3d(120px, 0, 0);
+}
+#transportRouteId, #routeDate {
+	color: white;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: @dpi_mult*10px;
+}
+#stopList{
+	color: white;
+	background-color: @dsv-primary;
+	border: none;
+	width: 45%;
+}
+#transportForm div.list {
+	width: 80%;
+	height: 25%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 0%;
+}
+::-webkit-input-placeholder {
+    color: @dsv-blue-4 !important;
+}
+:-moz-placeholder {
+    color: @dsv-blue-4 !important;
+}
+::-moz-placeholder {
+    color: @dsv-blue-4 !important;
+}
+:-ms-input-placeholder {
+    color: @dsv-blue-4 !important;
+}
+#routeSpinner {
+	margin-top: @dpi_mult*5px;
+	display: inline-block;
+	padding-left: 30%;
+}
+.route-page-disabled {
+	position:relative;
+}
+.route-page-disabled::before{
+ 	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+#vehicleForm div.list {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 1%;
+}

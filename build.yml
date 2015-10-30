@@ -1,0 +1,35 @@
+sdkversion: "5.2.0"
+name: "RhoMobileApplication2"
+version: "1.0"
+vendor: "rhomobile"
+build: "debug"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator8.2"
+  provisionprofile: 
+  codesignidentity: "iPhone Developer"
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.rhomobileapplication2"
+  BundleURLScheme: "rhomobileapplication2"
+  production:
+    ipa_itunesartwork_image: "./production/iTunesArtwork.png"
+wp8:
+  productid: "02805e51-5fad-0133-2c1c-6cf4bbdc807f"
+android:
+  version: "2.3.3"
+  logcatFilter: "APP:I StrictMode:I DEBUG:I *:E"
+  capabilities:
+wm: 
+win32:
+  deployqt: "1"
+  deploymsvc: "1"
+extensions:
+  - rhoconnect-client
+rhobundle:
+  exclude_items:
+    - thumb.db
+app_type: "rhoelements"
+capabilities:
+  - gps
+  - camera

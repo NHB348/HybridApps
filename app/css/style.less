@@ -1,0 +1,61 @@
+/* set default values for WM6.5/Rho */
+@dpi: 228.57;
+@dpi_mult: @dpi / 160; 
+@visibleHeight: 640; /* pixels */
+@stopListItemHeight: 102;
+@stopListInboxItemHeight: 139.5;
+@documentHeight: 640;
+@documentWidth: 480;
+@margin-ct: 16;
+
+@pagerButtonGap: 16*@dpi_mult;
+@pagerButtonSize: 40*@dpi_mult;
+
+/*The design was developed to fit into 480pxs*/
+@defaultDesignWidth: 480;
+
+// to test : @ratioDiff : @documentWidth * @dpi_mult / @defaultDesignWidth;
+@ratioDiff : @documentWidth / @defaultDesignWidth;
+
+@statusBarHeight: 28 * @dpi_mult;
+@headerHeight: 48 * @dpi_mult;
+
+@dsv-primary: #002664; /*rgb(0,38,100)*/
+@dsv-grey-dark-4: #5E6A71;
+@dsv-grey-dark-5: #4D545D;
+@dsv-orange-4: #F47920;
+@dsv-blue-4: #7C9DBE;
+@dsv-grey-light-1: #EAEBEC;
+@dsv-grey-light-4: #DBDCDD;
+@dsv-grey-light-7: #AAACAE;
+@dsv-grey-dark-5: #4D545D;
+@dsv-grey-dark-7: #22252A;
+@dsv-green-4: #72BF44;
+
+
+@url-relative: "../img";
+@rho: 1;
+
+@import "mixin";
+
+@import "common";
+@import "ionic_overrides";
+
+@import "status_bar";
+@import "login";
+@import "menu";
+@import "status_bar";
+@import "stoplist";
+@import "pager";
+@import "hpager";
+@import "stopdetails";
+@import "popup_menus";
+@import "displaystop";
+@import "appstatus";
+@import "stopsInbox";
+@import "moveShipments";
+@import "stopCreate";
+@import "signStop";
+
+
+/* for WM6.5 - RhoElements browser, this is generated with @dpi = 228.57 */

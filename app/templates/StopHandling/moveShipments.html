@@ -1,0 +1,42 @@
+<ion-view data-name="MoveShipments"> 
+	<ion-content scroll="false" id="moveShipmentsContent">
+		<div class="bar bar-header move-shipments-header" style="z-index: 100">
+            <button class="button menu-button" ng-click='goBack()'><i class="fa fa-2x fa-arrow-left"></i></button>
+            <h1 class="title">{{selectedShipments.length == 0 ? 'No' : selectedShipments.length}} {{messages.shipmentsSelected}}</h1>
+            <button class="button headerLastButton menu-button" ng-click='onAccept()'><i class="fa fa-2x fa-check"></i></button>
+        </div>
+
+		<div class="list stop-handling-header">
+		    <div class="item item-icon-right stop-handling-header-content">
+		      	<h2>{{stop.name}}</span>
+		      	<p>{{stop.shipment.groups.length}} {{messages.shipments}}</span>
+			</div>
+		</div>
+    
+        <div class="list stop-move-groups">
+		    <div class="item item-icon-left stop-move-group-item"
+                 ng-repeat="group in stop.shipment.groups track by $index"
+                 ng-class="group.selected ? 'group-list-item-selected' : 'white'"
+                 ng-click="onSelectGroup(group)">
+	    		<i class="icon"><table class="center">
+					<tr>
+						<td>
+							<div ng-show="group.type == 2">
+								<span class="dsv-delivery"></span>
+							</div>
+						</td>
+						<td>
+							<div ng-show="group.type == 1">
+								<span class="dsv-pickup"></span>
+							</div>
+						</td>
+					</tr>
+				</table>
+		      	<span>{{group.name}}</span>
+		      	</i>
+            </div>
+		</div>
+        
+		<list-Pager />
+	</ion-content> 
+</ion-view>

@@ -1,0 +1,20 @@
+<div class="bar bar-header stopdetails-header" style="z-index: 100">
+  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-lg fa-times stopdetails-close-btn"></i></button>
+  <table>
+  	<tr><td><div class="stopsdetails-title">{{stop.name}}</div></td></tr>
+  	<tr><td><div class="stopdetails-types">{{stopTypes}}</div></td></tr>
+  </table>
+</div>
+
+<ion-view>
+	<ion-content>
+		<div class="list">
+			<div ng-repeat="party in stop.parties track by $index" class="party-container">
+				<div><label class="party-type uppercase">{{party.type}}</label></div>
+				<div><label class="party-name">{{party.name}}</label></div>
+				<div><label class="party-address-1">{{party.address1}}</label></div>
+				<div><label class="party-address-2">{{party.address2}}</label></div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

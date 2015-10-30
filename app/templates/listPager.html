@@ -1,0 +1,13 @@
+<div class="pager">
+	<table class="center">
+		<tr ng-show="pager.startIndex > 0">
+			<td><div class="center pagerButton pagerButtonUp" ng-click="onPrev()"><i class="fa fa-2x fa-chevron-up pagerButtonArrowUp"></i></div></td>
+		</tr>
+		<tr ng-show="pager.showNumbers">
+			<td><span class="center" style="color:#7D9EBD; background-color: white; margin: 2px">{{pager.startIndex + 1}}-{{pager.endIndex}} of {{pager.count}}</span></td>
+		</tr>
+		<tr ng-show="pager.endIndex < pager.count">
+			<td><div class="center pagerButton pagerButtonDown" ng-click="onNext()"><i class="fa fa-2x fa-chevron-down pagerButtonArrowDown"></i></div></td>
+		</tr>
+	</table>
+</div>

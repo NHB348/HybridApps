@@ -1,0 +1,17 @@
+<ion-tabs class="tabs-striped tabs-top tabs-icon-only tabs-color-dark" data-name="StopDetailsTabs">
+  <ion-tab icon-on="fa fa-info-circle stopDetails-tab-icon" icon-off="fa fa-info-circle" href="#/stop/info/{{id}}/{{signMode}}">
+  	<ion-nav-view name="info-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab icon-on="fa fa-users stopDetails-tab-icon" icon-off="fa fa-users" href="#/stop/parties">
+    <ion-nav-view name="parties-tab"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab icon-on="fa fa-cubes stopDetails-tab-icon" icon-off="fa fa-cubes" href="#/stop/shipments">
+    <ion-nav-view name="shipments-tab"></ion-nav-view>
+  </ion-tab>
+    
+  <ion-tab icon-on="fa fa-comment stopDetails-tab-icon" icon-off="fa fa-comment" class="{{showSignMode()}}" href="#/stop/instructions">
+    <ion-nav-view name="instructions-tab"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

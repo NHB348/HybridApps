@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="quitbutton" content="visibility:visible;" />
+    <META HTTP-Equiv="SIP" Content="automatic">
+    <META HTTP-Equiv="SIPButton" content="visibility:visible;">
+    <META HTTP-EQUIV="Stylus" content="enable">
+    <META HTTP-Equiv="Imager" Content="imagerCaptureEvent:url('JavaScript:onPictureCaptured(%json)');">
+    <META HTTP-Equiv="AudioCapture" content="AudioSaveEvent:url('JavaScript:onAudioCaptured(%json)')">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style_wm.css" rel="stylesheet">
+    <link href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <!-- include Rho - use Rho APIs for WM -->
+    <script type="text/javascript" charset="utf-8" src="lib/rho/rho_javascript_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="lib/rho/rho_common_api_noconflict.js"></script>
+	<script type="text/javascript" charset="utf-8" src="lib/rho/rhoapi-modules.js"></script>
+        
+    <script type="text/javascript" src="js/callbacks.js"></script>
+    <script type="text/javascript" src="js/overrides.js"></script>
+        
+    <script data-main="main" src="lib/require/require.min.js"></script>
+        
+    <script type="text/javascript">
+        /*
+        var getCss = function(el) {
+            var style = window.getComputedStyle(el);
+            return Object.keys(style).reduce(function(acc, k) {
+                var name = style[k],
+                    value = style.getPropertyValue(name);
+                if (value !== null) {
+                    acc[name] = value;
+                }
+                return acc;
+            }, {});
+        };
+
+        $('*').on('click', function(event) {
+            var x = event.clientX, y = event.clientY;
+            var elementMouseIsOver = document.elementFromPoint(x, y);
+            var css = getCss(elementMouseIsOver);
+            var text = elementMouseIsOver.tagName + "." + elementMouseIsOver.className + ':<br>';         
+            for(var key in css) {
+                text += key + ": " + css[key] + "<br>";
+            }
+
+            $('#log').html(text);
+            console.log(text); 
+        });
+        */
+        </script>
+</head>
+<body>
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+    <div id="log"></div>
+</body>
+</html>

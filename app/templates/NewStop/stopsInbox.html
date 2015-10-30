@@ -1,0 +1,81 @@
+<ion-view data-name="StopsInboxView"> 
+    <ion-content scroll="false">
+        <div class="bar bar-header stops-inbox-header" style="z-index: 100">
+            <button class="button menu-button" ng-click='goBack()'><i class="fa fa-2x fa-times"></i></button>
+
+            <h1 class="title">{{messages.inbox}} ({{stops.length}})</h1>
+            <button class="button headerPreLastButton menu-button" id="inboxRefreshButton"
+                    ng-click='onRefresh()'><i class="fa fa-2x fa-refresh"></i></button>
+            <button class="button headerLastButton menu-button" id="inboxOKButton"
+                    ng-show="hasSelectedStops == true"
+                    ng-click='onOK()'><i class="fa fa-2x fa-check"></i></button>
+        </div>
+        
+        <div class="stops-inbox-scan-content" style="z-index: 100" ng-show="withSearch == true">
+            <div class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="fa fa-lg fa-barcode placeholder-icon" on-tap="scanBarcode()"></i>
+                        <input type="text" id="scanEnterInput" ng-model="data.itemCode" placeholder="{{messages.scanEnterItems}}">
+                    </label>
+                    <button class="button uppercase" id="inboxGetButton"
+                        ng-click='onGetScannedItem()'>{{messages.get}}</button>
+                </div>
+            </div>
+        </div>
+		
+		<div class="list stops-inbox-list">
+		    <div class="item stops-inbox-item"
+                 ng-repeat="stop in currentStops track by $index">
+	    		<div class="item-inbox-type center">
+					<div class="center">
+						<table class="center">
+							<tr>
+								<td>
+									<div class="item-delivery-type" ng-show="_isDelivery(stop)">
+										<span class="dsv-delivery"></span>
+									</div>
+								</td>
+								<td>
+									<div class="item-delivery-type" ng-show="_isPickup(stop)">
+										<span class="dsv-pickup"></span>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="icon-container">
+						<i class="fa fa-exclamation-triangle orange-color-4" ng-show="stop.mvvm.services[0].type == 'hazardous'"></i>
+						<i class="fa fa-phone" ng-show="stop.mvvm.services[0].type == 'call'"></i>
+						<i class="fa fa-money" ng-show="stop.mvvm.services[0].type == 'cod'"></i>
+						<span class="dsv-eur-pallet" 
+                              ng-show="stop.mvvm.services[0].type == 'receivePallet' || stop.mvvm.services[0].type == 'leavePallet'"></span>
+						<i class="fa fa-comment" ng-show="stop.mvvm.services[0].type == 'Instructional Text'"></i>
+					</div>
+				</div>
+				<div class="item-desc">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="app-title uppercase stop-inbox-name"><span>{{stop.name}}</span></div>
+                                <div class="stop-address">{{stop.address}}, {{stop.postalCode}}</div>
+                                <div class="app-text">
+                                    <span class="group-count"><span ng-init="totalWeight = _computeTotalWeight(stop)">{{totalWeight}}</span>
+                                     in {{stop.shipment.groups.length}} (<span ng-init="totalItemsCount = _computeTotalNumberOfItems(stop.shipment.groups)">{{totalItemsCount}}</span>) 
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="icon stops-inbox-item-check">
+                                    <label><input type="checkbox"
+                                                  ng-change="onStopSelected('{{stop.id}}', $event)"
+                                                  ng-model="stop.toBeImported"></label></i>
+                            </td>
+                        </tr>
+                    </table>
+				</div>
+		    </div>
+		</div>
+	</ion-content> 
+    <list-Pager />
+</ion-view>

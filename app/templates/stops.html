@@ -1,0 +1,68 @@
+<div class="bar bar-header" style="z-index: 100" ng-show="isGroupedEnabled == false && isSingleSelectEnabled == false">
+  <button menu-toggle="left" class="fa fa-2x button icon fa-bars menu-button"></button>
+  <h1 id="stopsTitle" class="title">Stops</h1>
+  <button class="button headerPreLastButton menu-button" ng-click="openInbox(false)"><i class="fa fa-2x fa-bell-o"></i></button>
+  <button class="button headerLastButton menu-button" ng-click="openMenu($event)"><i class="fa fa-2x fa-ellipsis-v"></i></button>
+</div>
+
+<div class="bar bar-header" style="z-index: 100" ng-show="isGroupedEnabled">
+  <button class="button menu-button" ng-click='onCancelGroupStops()'><i class="fa fa-2x fa-arrow-left"></i></button>
+  <h1 id="stopsGroupTitle" class="title">{{selectionStopsText}}</h1>
+  <button class="button headerLastButton menu-button" ng-click="onGroupStops()" ng-show="selectionStops.length > 1"><i class="fa fa-2x fa-check"></i></button>
+</div>
+
+<div class="bar bar-header" style="z-index: 100" ng-show="isSingleSelectEnabled">
+    <button class="button menu-button" ng-click='onCancelSingleSelectStops()'><i class="fa fa-2x fa-arrow-left"></i></button>
+    <h1 id="stopsGroupTitle" class="title">{{messages.selectStop}}</h1>
+</div>
+
+<ion-view>
+	<ion-content>
+		<div class="list stoplist">
+			<div class="stoplist-item item" ng-repeat="stop in currentStops"
+				 ng-class="stop.selected == true ? 'stop-item-selected' : ''">
+
+				<div class="item-type center" ng-click="viewDetails('{{stop.id}}', $event)"
+					 ng-class="stop.selected == true ? 'stop-item-selected-details' : ''">
+					<div class="center">
+						<table class="center">
+							<tr>
+								<td>
+									<div class="item-delivery-type" ng-show="_isDelivery(stop)">
+										<span class="dsv-delivery"></span>
+									</div>
+								</td>
+								<td>
+									<div class="item-delivery-type" ng-show="_isPickup(stop)">
+										<span class="dsv-pickup"></span>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="icon-container">
+						<i class="fa fa-exclamation-triangle orange-color-4" ng-show="stop.mvvm.services[0].type == 'hazardous'"></i>
+						<i class="fa fa-phone" ng-show="stop.mvvm.services[0].type == 'call'"></i>
+						<i class="fa fa-money" ng-show="stop.mvvm.services[0].type == 'cod'"></i>
+						<span class="dsv-eur-pallet"
+                              ng-show="stop.mvvm.services[0].type == 'receivePallet' || stop.mvvm.services[0].type == 'leavePallet'"></span>
+						<i class="fa fa-comment" ng-show="stop.mvvm.services[0].type == 'Instructional Text'"></i>
+					</div>
+					<div class="icon-container" ng-show="stop.mvvm.services.length > 2">
+						<i class="fa fa-ellipsis-h"></i>
+					</div>
+				</div>
+				<div class="item-desc" ng-click="onStopSelected('{{stop.id}}', $event)">
+					<div class="app-title uppercase stop-name" ng-class="stop.status == 'canceled' ? 'orange-color-4' : (stop.status == 'done' ? 'dark-grey-color-5' : '')"><span>{{stop.name}}</span></div>
+					<div class="stop-address">{{stop.address}}, {{stop.postalCode}}</div>
+					<div class="app-text">
+						<span class="group-count"><span ng-init="totalWeight = _computeTotalWeight(stop)">{{totalWeight}}</span>
+						 in {{stop.shipment.groups.length}} (<span ng-init="totalItemsCount = _computeTotalNumberOfItems(stop.shipment.groups)">{{totalItemsCount}}</span>) -
+						 <span ng-repeat="group in stop.shipment.groups track by $index">{{group.name}}({{group.items.length}}) </span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+	<list-Pager />
+</ion-view>

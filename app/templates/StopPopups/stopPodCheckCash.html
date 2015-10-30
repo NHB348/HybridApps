@@ -1,0 +1,14 @@
+<ion-modal-view id="stopPodCheckCash" class="stopPodCheck modal-rounded modal-centered">
+    <ion-header-bar>
+        <h3>{{messages.cashCollectTitle}}</h3>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <p>{{extendedServices.cash.uivalue}}</p>
+
+        <div class="list noBorder">
+            <a class="item" ng-click="podCheckAction('cash', false)">{{messages.cashCollectNo}}</a>
+            <a class="item" ng-click="podCheckAction('cash', true)">{{messages.cashCollectYes}}</a>
+            <a class="item" ng-click="podCheckAction('cash', 'back')">{{messages.cashCollectBack}}</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

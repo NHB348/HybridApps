@@ -1,0 +1,11 @@
+<ion-popover-view id="stops-menu-popover">
+  <ion-content class="stops-menu-popover-content" scroll="false" style="height: 99% !important;">
+    <div class="list">
+		<a class="item item-icon-left stops-popover-menu-item" href="#" ng-click='onActionSelected("sort")'><i class="icon fa fa-sort stops-popover-menu-item-icon"></i>{{messages.stopsMenu.sortList}}</a>
+		<a class="item item-icon-left stops-popover-menu-item stops-popover-menu-item-with-border-top" href="#" ng-click='onActionSelected("group")'><i class="icon fa fa-code-fork stops-popover-menu-item-icon"></i>{{messages.stopsMenu.groupStops}}</a>
+		<a class="item item-icon-left stops-popover-menu-item" href="#" ng-click='onActionSelected("split")'><i class="icon fa fa-code-fork stops-popover-menu-item-icon"></i>{{messages.stopsMenu.splitStops}}</a>
+		<a class="item item-icon-left stops-popover-menu-item stops-popover-menu-item-with-border-top" href="#" ng-click='onActionSelected("create")'><i class="icon fa fa-plus-circle stops-popover-menu-item-icon stops-popover-menu-item-icon-green"></i>{{messages.stopsMenu.createStop}}</a>
+		<a class="item item-icon-left stops-popover-menu-item" href="#" ng-click='onActionSelected("get")'><i class="icon fa fa-cloud-download stops-popover-menu-item-icon stops-popover-menu-item-icon-blue"></i>{{messages.stopsMenu.getStops}}</a>
+    </div>
+  </ion-content>
+</ion-popover-view>

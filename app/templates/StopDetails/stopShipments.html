@@ -1,0 +1,25 @@
+<div class="bar bar-header stopdetails-header" style="z-index: 100">
+  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-lg fa-times stopdetails-close-btn"></i></button>
+  <table>
+  	<tr><td><div class="stopsdetails-title">{{stop.name}}</div></td></tr>
+  	<tr><td><div class="stopdetails-types">{{stopTypes}}</div></td></tr>
+  </table>
+</div>
+
+<ion-view>
+	<ion-content>
+		<div class="list">
+			<div ng-repeat="gr in stop.shipment.groups track by $index" class="group-container">
+				<div><label class="group-name">{{gr.name}}</label></div>
+				<div class="list">
+					<div ng-repeat="item in gr.items track by $index" class="group-item">{{item.code}}
+						<span ng-repeat="deviation in item.deviations track by $index" class="orange-color-4" 
+						style="display: inline-block" ng-show="signMode">
+						{{deviation.description}}<span ng-show="$index != item.deviations.length-1" style="display: inline-block">,&nbsp;</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

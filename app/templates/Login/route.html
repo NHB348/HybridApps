@@ -1,0 +1,35 @@
+ <div class="bar bar-header logo-dsv center hide-on-keyboard-open" style="z-index: 100"></div>
+
+<ion-view>
+    <ion-content class="login-content" padding="false" scroll="false">	
+        <form id="transportForm">
+        
+          <div class="route-title">{{messages.login.transportRouteTitle}}</div>
+          
+          <div id = "transp-route-toggle">
+         	<label ng-class="transport.transportOffRouteOn ? 'style-disabled' : 'style-enabled'">TRANSPORT</label>
+    		<label class="toggle">
+			   <input type="checkbox" ng-model="transport.transportOffRouteOn" ng-change="changePlaceHolder()">
+			   <div class="track">
+			      <div class="handle"></div>
+			   </div>
+			</label>
+			<label ng-class="transport.transportOffRouteOn ? 'style-enabled' : 'style-disabled'">ROUTE</label>
+          </div>
+          
+          <ion-list class="center">
+          	    <p><span class="fa fa-barcode" on-tap="scanBarcode('routeTranspId')"></span>
+                <label class="item item-input center">
+                    <input type="text" class="center" placeholder="{{transport.placeholder}}" id="transportRouteId" ng-model="transport.transportRouteId">
+                </label></p>
+                <label class="item item-input center" ng-show="transport.transportOffRouteOn">
+                    <input type="date" class="center" id="routeDate" ng-model="transport.routeDate">
+                </label>
+            </ion-list>
+
+            <a class="button" id="exitButton" class="uppercase"  ng-click="exit()" ng-bind="messages.login.exitButton"></a>
+			<a class="button" id="stopList" class="uppercase" href="#" ng-bind="messages.login.stopList" ng-click="goToStopList()" ng-hide="transport.spinnerOn"></a>
+ 			<div id ="routeSpinner" ng-show="transport.spinnerOn"> 	<ion-spinner icon="ios"></ion-spinner> </div>
+        </form>
+    </ion-content>
+</ion-view>

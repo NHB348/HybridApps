@@ -1,0 +1,83 @@
+/***************************** stop list *******************************/
+.stoplist {
+    background-color: @dsv-primary;
+}
+.stoplist-item {
+	padding: 0;
+	border-bottom-color: #f2f2f2 !important;
+	display: table;
+	width: 100%;
+}
+.item-type {
+	float: left;
+	background-color: #f2f2f2;
+	border-bottom-color: #f2f2f2 !important;
+	width: (48*@dpi_mult)*1px;
+	min-height: @stopListItemHeight * 1px + 2px;
+	vertical-align: middle;
+    display: table-cell;
+}
+.item-desc {
+    width: @ratioDiff;
+	padding: 0px (12 * @dpi_mult)*1px;
+	vertical-align: middle;
+    display: table-cell;
+    width: 100%;
+    .ratio-value(14px);
+}
+.item-delivery-type {	 
+	margin-top: (@stopListItemHeight * 20 / 100) * 1px;
+}
+.item-delivery-type span {
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.group-count, .item-count {
+	white-space:normal;
+}
+.item-groups {
+	
+}
+.hours {
+	color: #b3b5b6;
+	margin-right: 10px;
+}
+.icon-container {
+	margin-top: 7px;
+}
+.paginationHead {
+	margin: 0 auto !important;
+}
+.fa-chevron-left,
+.fa-chevron-right {
+	.ratio-value(20px) !important;
+}
+h1#stopsTitle,
+h1#stopsGroupTitle {
+	.ratio-value(20px);
+}
+
+.stop-name {
+    .ratio-value(16px);
+}
+
+div.stop-name span {
+	display:inline-block;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+    width: (@documentWidth - (48+24)*@dpi_mult)*1px;
+}
+.stop-address {
+	.ratio-value(18px);
+	color: @dsv-grey-dark-5;
+} 
+div.item-delivery-type label.pickup {
+	color: white;
+}
+.stop-item-selected-details {
+	background-color: @dsv-grey-light-4;
+}
+.stop-item-selected {
+	background-color: @dsv-grey-light-1;
+}

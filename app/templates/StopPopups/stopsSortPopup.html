@@ -1,0 +1,21 @@
+<ion-modal-view class="modal-as-nav" id="stops-popup-sort-modal">
+   <ion-header-bar class="stops-popover-menu-item">
+     <h1>Sort stops</h1>
+   </ion-header-bar>
+   <ion-content scroll="false" class="stops-popover-menu-content">
+     <div class="list">
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onSortChanged('postal-code-asc')">
+			<i class="icon fa fa-sort-numeric-asc stops-poppup-menu-item-icon"></i>Postal code (asc.)</a>
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onSortChanged('postal-code-desc')">
+			<i class="icon fa fa-sort-numeric-desc stops-poppup-menu-item-icon"></i>Postal code (desc.)</a>
+		<a class="item item-icon-left stops-popup-sort-list-item stops-popover-menu-item-with-border-top" href="#" ng-click="onSortChanged('name-asc')">
+			<i class="icon fa fa-sort-alpha-asc stops-poppup-menu-item-icon"></i>Name code (asc.)</a>
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onSortChanged('name-desc')">
+			<i class="icon fa fa-sort-alpha-desc stops-poppup-menu-item-icon"></i>Name code (desc.)</a>
+		<a class="item item-icon-left stops-popup-sort-list-item stops-popover-menu-item-with-border-top" href="#" ng-show="isTransport == true" ng-click="onSortChanged('load-sequence-asc')">
+			<i class="icon fa fa-sort-numeric-asc stops-poppup-menu-item-icon"></i>Load sequence (asc.)</a>
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#"  ng-show="isTransport == true" ng-click="onSortChanged('load-sequence-desc')">
+			<i class="icon fa fa-sort-numeric-desc stops-poppup-menu-item-icon"></i>Load sequence (desc.)</a>
+	</div>
+   </ion-content>
+ </ion-modal-view>

@@ -1,0 +1,26 @@
+ <div class="bar bar-header logo-dsv center hide-on-keyboard-open" style="z-index: 100"></div>
+
+<ion-view>
+    <ion-content class="login-content" padding="false" scroll="false">	
+         
+        <form id="vehicleForm">
+        
+      <div id="vehicleSpinner" ng-show="currentVehicles.length== 0" >
+      	<ion-spinner icon="ios"></ion-spinner> 
+      	<div id="vehicleSpinnerMessage">{{messages.login.vehicleSearch}}</div>
+      </div>
+        
+	    <ion-list class="center"  ng-show="currentVehicles.length > 0">
+	       <ion-item ng-if="currentVehicles.length > 0" class="tab-vehicle-disabled">{{messages.login.vehicleTitle}}</ion-item>
+			 <ion-item ng-repeat="item in currentVehicles" ng-click="selectVehicle({{item}})" ng-class="{'tab-vehicle-enabled': item.used == false , 'tab-vehicle-disabled': item.used == true } ">
+			    {{item.registrationId}}
+			     <p ng-if="item.lastUsed">Last used vehicle</p>
+			     <p ng-if="item.used">Vehicle in use</p>
+			  </ion-item>
+		</ion-list>
+		<a class="button" id="exitButton" class="uppercase" ng-class="{'exitButton-vehicles': currentVehicles.length == 0} "  ng-click="exit()" ng-bind="messages.login.exitButton"></a>
+        </form>
+
+    </ion-content>
+   <list-Pager ng-show="currentVehicles.length > 0" />
+</ion-view>

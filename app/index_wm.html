@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="quitbutton" content="visibility:visible;" />
+    <META HTTP-Equiv="SIP" Content="automatic">
+    <META HTTP-Equiv="SIPButton" content="visibility:visible;">
+    <META HTTP-EQUIV="Stylus" content="enable">
+    <META HTTP-Equiv="Imager" Content="imagerCaptureEvent:url('JavaScript:onPictureCaptured(%json)');">
+    <META HTTP-Equiv="AudioCapture" content="AudioSaveEvent:url('JavaScript:onAudioCaptured(%json)')">
+	
+	<META HTTP-Equiv="scanner" Content="enable">
+	<META HTTP-Equiv="scanner" Content="DecodeEvent:url('javascript:onBarcodeScaned(%json);')">
+    
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="fonts/dsv-mobile-icons/dsv-mobile-icons.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <link href="fonts/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	
+    <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+
+    <!-- include Rho - use Rho APIs for WM -->
+    <!-- pre-4.0 JS API -->
+    <script type="text/javascript" src="/public/js/rho_javascript_api.js"></script>
+    <!-- compatibility layer -->
+    <script type="text/javascript" src="/public/js/rho_common_api_noconflict.js"></script>
+
+    <!-- new Common JS API -->
+    <script type="text/javascript" src="/public/api/rhoapi-modules.js"></script>
+        
+        
+	<script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/callbacks.js"></script>
+    <script type="text/javascript" src="js/overrides.js"></script>
+        
+    <script data-main="main" src="lib/require/require.min.js"></script>
+	
+	<script type="text/javascript" src="lib/modernizr-touch.js"></script>
+	<script type="text/javascript" src="lib/signatureCapture.js"></script>
+	<script type="text/javascript" src="lib/jquery.json-2.3.min.js"></script>
+	   
+    <script type="text/javascript">
+        /*var getCss = function(el) {
+            var style = window.getComputedStyle(el);
+            return Object.keys(style).reduce(function(acc, k) {
+                var name = style[k],
+                    value = style.getPropertyValue(name);
+                if (value !== null) {
+                    acc[name] = value;
+                }
+                return acc;
+            }, {});
+        };
+
+        $('*').on('click', function(event) {
+            var x = event.clientX, y = event.clientY;
+            var elementMouseIsOver = document.elementFromPoint(x, y);
+            var css = getCss(elementMouseIsOver);
+            var text = elementMouseIsOver.tagName + "." + elementMouseIsOver.className + ':<br>';         
+            for(var key in css) {
+                text += key + ": " + css[key] + "<br>";
+            }
+
+            $('#log').html(text);
+            console.log(text); 
+        });*/
+        
+        </script>
+</head>
+<body>
+	<table id="statusBarDiv">
+		<tr>
+		<td><div id="cellularDiv" class="left">
+			<i class="fa fa-lg fa-circle"></i>
+			<i class="fa fa-lg fa-circle"></i>
+			<i class="fa fa-lg fa-circle"></i>
+			<i class="fa fa-lg fa-circle"></i>
+			<i class="fa fa-lg fa-circle"></i></div>
+		</td>
+		<td><div id="wifiDiv">
+			<i class="fa fa-lg fa-wifi center forcehide"></i></div>
+		</td>
+		<td><div id="serverDiv" class="center">
+			<i class="fa fa-lg fa-long-arrow-up forcehide"></i>
+			<i class="fa fa-lg fa-long-arrow-down forcehide"></i></div>
+		</td>
+		<td id="timeDiv" class="center">--:--</td>
+		<td><div id="positionDiv" class="center">
+			<i class="fa fa-lg fa-location-arrow center forcehide"></i></div>
+		</td>
+		<td><div id="batteryDiv" class="right">
+			<label id="batteryText">--%</label> <i class="fa fa-lg fa-battery-4"></i></div>
+		</td>
+		<td></td>
+		</tr>
+	</table>
+
+	<ion-side-menus enable-menu-with-back-views="false" id="appMenu">
+        <ion-side-menu-content drag-content="false">
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+
+        <ion-side-menu side="left" class="hide" ng-controller="MenuController" id="sideMenu">
+            <ion-content>
+                <div class="list">
+                    <div id="logoContainer">
+                    	<label id="driverName">John Doe</label>
+                    	
+                    	<a id="logoutBtn" class="uppercase" href="#" menu-close ng-click="logout()">
+	                        Sign-out
+	                    </a>
+                    </div>
+                    
+                    <div class="list">
+	                    <a class="item item-icon-left" href="#">
+						    <i class="icon fa fa-map-marker menu-item-icon"></i>
+						    <span>Stops</span>
+						  </a>
+						<a class="item item-icon-left" href="#" menu-close ng-click="goToRouteTransp()">
+						    <i class="icon fa fa-road menu-item-icon"></i>
+						    <span>{{deliveryType}}</span> <span class="menu-item-text">{{transportRoute}}</span>
+						  </a>
+                    </div>
+                    <div id="menu-status-settings">Status & Settings</div>
+                    <div class="list">
+	                    <a class="item item-icon-left" href="#/appstatus" menu-close>
+						    <i class="icon fa fa-signal menu-item-icon"></i>
+						    <span>Status</span>
+						    <p class='menu-item-text-details'>Connectivity, software version, etc.</p>
+						  </a>
+						<a class="item item-icon-left" href="#/appsettings" menu-close>
+						    <i class="icon fa fa-cog menu-item-icon"></i>
+						    <span>Settings</span>
+						    <p class='menu-item-text-details'>Language and keyboard</p>
+						  </a>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+    
+    <div id="log"></div>
+</body>
+</html>

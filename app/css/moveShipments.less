@@ -1,0 +1,30 @@
+#moveShipmentsContent {
+    background-color: @dsv-grey-light-4 !important;
+    height: 100%;
+}
+
+.move-shipments-header {
+    background-color: @dsv-grey-dark-4;
+    height: @headerHeight;
+    * {
+        color: white;
+    }
+}
+
+.group-list-item-selected {
+    background-color: @dsv-grey-light-7;
+}
+.stop-move-groups {
+	display: table;
+	width: 100%;
+	height: (@documentHeight - 2 * @headerHeight)*1px;
+}
+.stop-move-group-item {
+	height: @groupItemHeight;
+	border: none;
+    margin-bottom: 5px;
+}
+.stop-move-group-item span {
+    .ratio-value(18px) !important;
+    padding-left: 18 * @dpi_mult * 1px;
+}

@@ -1,0 +1,13 @@
+<ion-modal-view id="stopPodCheckPallet" class="stopPodCheck modal-rounded modal-centered">
+    <ion-header-bar>
+        <h3>{{messages.palletExchangeTitle}}</h3>
+    </ion-header-bar>
+    <ion-content>
+        <p>{{extendedServices.pallet.uivalue}}</p>
+        <div class="list noBorder">
+            <a class="item" ng-click="podCheckAction('pallet', false)">{{messages.palletExchangeNo}}</a>
+            <a class="item" ng-click="podCheckAction('pallet', true)">{{messages.palletExchangeYes}}</a>
+            <a class="item" ng-click="podCheckAction('pallet', 'back')">{{messages.palletExchangeBack}}</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

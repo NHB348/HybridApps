@@ -1,0 +1,159 @@
+.stop-details-container {
+	background-color: @dsv-primary !important;
+	width: 100% !important;
+	left: 0px !important;
+	color: white;
+}
+div.stop-details-comments {
+	background-color: #335183 !important;
+	color: white;
+	min-height: 50px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+div.stop-details-comments span {
+	padding: 10px;
+	.ratio-value(15px);
+}
+
+.stopdetails-header {
+	color: white;
+	background-color: @dsv-primary;
+	height: (48 * @dpi_mult) * 1px;
+	padding: 0;
+}
+.stopdetails-types {
+	color: @dsv-blue-4;
+	margin-left: (24*@dpi_mult)*1px;
+}
+.stopsdetails-title {
+	color: white;
+	.ratio-value(18px);
+	margin-left: (24*@dpi_mult)*1px;
+	margin-top: (7*@dpi_mult)*1px;
+}
+div.stopsdetails-title span {
+	display:inline-block;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+.stopdetails-close-btn {
+	color: white;
+	margin-left: (10*@dpi_mult)*1px;
+}
+.stopDetails-tab-icon {
+	color: @dsv-primary;
+}
+
+.info-servicesTable {
+	width: 100%;
+}
+.info-servicesTable tr {
+	height: (24*@dpi_mult) * 1px;
+	border-bottom: 2px solid white;
+    vertical-align: middle;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+.info-servicesTable tr when (@rho = 1){
+	background-image: url('/../@{url-relative}/stops/bg-dot.png');
+}
+.info-servicesTable tr when not (@rho = 1){
+	background-image: url('/@{url-relative}/stops/bg-dot.png');
+}
+.info-servicesTable td {
+	vertical-align: middle;
+}
+.info-title {
+	margin: (@margin-ct * @dpi_mult)*1px (@margin-ct * @dpi_mult)*1px (@margin-ct * @dpi_mult / 2)*1px (@margin-ct * @dpi_mult)*1px;
+	color: @dsv-grey-dark-4;
+}
+.info-serviceType {
+	width: 40%;
+    color: @dsv-primary;
+}
+.info-serviceType > label {
+	margin-left: (@margin-ct * @dpi_mult)*1px;
+}
+.info-serviceType-value {
+	.ratio-value(18px) !important;
+	color: @dsv-primary;
+}
+
+.info-instructions {
+	margin-left: (@margin-ct * @dpi_mult)*1px;
+	margin-right: (@margin-ct * @dpi_mult)*1px;
+	color: @dsv-grey-dark-5;
+	.ratio-value(18px);
+}
+.info-shipment-table {
+	width: 100%
+}
+.info-shipment {
+	width: 25%
+}
+.info-shipment-table td {
+	height: (48*@dpi_mult) * 1px;
+    vertical-align: middle;
+    background-repeat: repeat;
+    overflow: hidden;
+    border: 4px solid white;
+}
+.info-shipment-table td when (@rho = 1){
+	background-image: url('/../@{url-relative}/stops/bg-dot.png');
+}
+.info-shipment-table td when not (@rho = 1){
+	background-image: url('/@{url-relative}/stops/bg-dot.png');
+}
+/***** parties *****/
+.party-container {
+	padding: (@margin-ct * @dpi_mult/2)*1px (@margin-ct * @dpi_mult)*1px (@margin-ct * @dpi_mult / 2)*1px (@margin-ct * @dpi_mult)*1px;
+}
+div.party-container:nth-child(even) {
+    background-repeat: repeat;
+    overflow: hidden;
+}
+div.party-container:nth-child(even) when (@rho = 1){
+	background-image: url('/../@{url-relative}/stops/bg-dot.png');
+}
+div.party-container:nth-child(even) when not (@rho = 1){
+	background-image: url('/@{url-relative}/stops/bg-dot.png');
+}
+.party-type {
+	color:@dsv-grey-dark-4;
+}
+.party-name {
+	color: @dsv-primary;
+	.ratio-value(18px);
+}
+.party-address-1 {
+	color:@dsv-grey-dark-5;
+	.ratio-value(17px);
+}
+.party-address-2 {
+	color:@dsv-grey-dark-5;
+	.ratio-value(14px);
+}
+/***** items *****/
+.group-container {
+	padding: (@margin-ct * @dpi_mult/2)*1px (@margin-ct * @dpi_mult)*1px (@margin-ct * @dpi_mult / 2)*1px (@margin-ct * @dpi_mult)*1px;
+}
+div.group-container:nth-child(even) {
+    background-repeat: repeat;
+    overflow: hidden;
+}
+div.group-container:nth-child(even) when (@rho = 1){
+	background-image: url('/../@{url-relative}/stops/bg-dot.png');
+}
+div.group-container:nth-child(even) when not (@rho = 1){
+	background-image: url('/@{url-relative}/stops/bg-dot.png');
+}
+.group-name {
+	color: @dsv-primary;
+	.ratio-value(18px);
+}
+.group-item {
+	color:@dsv-grey-dark-4;
+}

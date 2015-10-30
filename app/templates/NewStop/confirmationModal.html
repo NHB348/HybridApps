@@ -1,0 +1,19 @@
+<ion-modal-view id="siteId-scan-modal">
+   <ion-header-bar class="stops-popover-menu-item stops-popup-sort-header">
+     <h1>{{messages.cancelCreateTitle}}</h1>
+   </ion-header-bar>
+   <ion-content scroll="false">
+    <div>
+    	<label>{{messages.cancelCreateQuestions}}</label>
+    </div>
+    <div>
+    	<table>
+    		<tr>
+    			<td><button class="button uppercanse blue-color-4" ng-click="onConfirm(false)">{{messages.noKeppChanges}}</button></td>
+    			<td><button class="button uppercase blue-color-4"
+    						ng-click="onConfirm(true)">{{messages.yes}}</button></td>
+    		</tr>
+    	</table>
+    </div>
+   </ion-content>
+ </ion-modal-view>

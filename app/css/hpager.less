@@ -1,0 +1,47 @@
+/**************** pager *****************/
+@item_width: 40; //dpi
+.hpager {
+	position: absolute; 
+	top: (@headerHeight/3)*1px;
+	background-color: transparent;
+	z-index: 100;
+	color: blue;
+	opacity: 1;
+    display: table;
+}
+.hpager table {
+    width: (@item_width*@dpi_mult)*1px;
+}
+.hpager table td {
+    vertical-align: middle;
+}
+
+.hpagerButton {
+	width: (@item_width*@dpi_mult)*1px;
+	height: (@item_width*@dpi_mult)*1px;
+	margin-top: 5px;
+	color: white;
+}
+
+.hpagerText {
+    width:  (@item_width*@dpi_mult)*1px;
+    color: white;
+    vertical-align: middle;
+    display: table-cell;
+    position: absolute;
+    left: (@documentWidth / 2-@item_width*@dpi_mult) * 1px;
+}
+.hpagerButtonLeft {
+    vertical-align: middle;
+    display: table-cell;
+    position: absolute;
+    top: (@documentHeight / 2) * 1px;
+    left: 0px;
+}
+.hpagerButtonRight {
+    vertical-align: middle;
+    display: table-cell;
+    position: absolute;
+    top: (@documentHeight / 2) * 1px;
+    right: -1*(@documentWidth - @item_width*@dpi_mult)*1px;
+}

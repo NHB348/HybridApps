@@ -1,0 +1,17 @@
+<ion-modal-view class="modal-as-nav" id="stops-popup-unknow-item">
+   <ion-header-bar class="stops-popover-menu-item">
+     <h1>{{unknown.title}}</h1>
+   </ion-header-bar>
+    <ion-content scroll="false" class="stops-popover-menu-content">
+        <div class="list noBorder">
+            <a class="item item-icon-left" href="#" ng-if="unknown.type == 'stop'" ng-click="handleMethod('add-to-current-stop')">
+                <i class="icon fa fa-plus-circle green-color-4"></i>Add to existing stop</a>
+
+            <a class="item item-icon-left" href="#" ng-if="unknown.type == 'transport'" ng-click="handleMethod('move-to-existing-stop')">
+                <i class="icon fa fa-arrow-circle-left green-color-4"></i>Move shipment to this stop</a>
+
+            <a class="item item-icon-left" href="#" ng-click="handleMethod('ignore')">
+                <i class="icon fa fa-times ≈"></i>Ignore</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,116 @@
+ * {
+	 font-family: 'Arial Regular', Arial;;
+	 border-color: white;
+	 border-bottom-color: white !important;
+ }
+ html {
+ 	 height: 100%;
+ }
+body, ion-view, ion-header-bar, ion-content, div.title  {
+	background-color: white !important;
+	height: 100% !important;
+}
+a {
+	text-decoration: none;
+}
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+.right {
+	text-align: right;
+}
+.app-title {
+	color: @dsv-primary;
+	background-color: transparent;
+}
+.app-text {
+	color: @dsv-grey-dark-4;
+	background-color: transparent;
+}
+.uppercase {	
+	text-transform: uppercase;
+}
+.forcehide {
+	display: none !important;
+}
+
+/***************************** dashboard *******************************/
+.noPadding {
+	padding: 0px !important;
+}
+.orange-color-4 {
+	color: @dsv-orange-4 !important;
+}
+.green-color-4 {
+	color: @dsv-green-4 !important;
+}
+.blue-color-4 {
+	color: @dsv-blue-4 !important;
+}
+.primary-color {
+	color: @dsv-primary !important;
+}
+.dark-grey-color-5 {
+	color: @dsv-grey-dark-5 !important;
+}
+.light-grey-color-1 {
+	color: @dsv-grey-light-1 !important;
+}
+.light-grey-color-4 {
+	color: @dsv-grey-light-4 !important;
+}
+.light-grey-color-7 {
+    color: @dsv-grey-light-7 !important;
+}
+.border-bottom {
+	border-bottom: 2px solid @dsv-grey-light-4 !important;
+}
+.error {
+	color: @dsv-orange-4 !important;
+}
+.white {
+    background-color: white;
+}
+/***************************** header buttons *******************************/
+.menu-button {
+	width: (48*@dpi_mult)*1px;
+	height: (48*@dpi_mult)*1px;
+    z-index: 100 !important;
+}
+.headerLastButton {
+	position: absolute;
+	right: 0px !important;
+}
+.headerPreLastButton when (@dpi = 228.57) {
+	position:absolute; 
+	right: (48*@dpi_mult)*1px;
+}
+.headerPreLastButton when not (@dpi = 228.57) {
+	position:absolute; 
+	right: (48*@dpi_mult)*1px;
+}
+.headerPrePreLastButton when (@dpi = 228.57) {
+	position:absolute; 
+	right: (2*48*@dpi_mult)*1px;
+}
+.headerPrePreLastButton when not (@dpi = 228.57) {
+	position:absolute; 
+	right: (2*48*@dpi_mult)*1px;
+}
+
+.display-table {
+	display: table;
+}
+.display-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #2f2f2f;
+}

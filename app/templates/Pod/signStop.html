@@ -1,0 +1,41 @@
+<ion-view data-name="SignStop" id="signStopView"> 
+	<ion-content scroll="false">
+		<div class="bar bar-header sign-header" style="z-index: 100">
+			<button class="button menu-button" ng-click='goBack()'>
+				<i class="fa fa-2x fa-arrow-left primary-color"></i>
+			</button>
+			 <div class="sign-header-text">{{messages.signStop.signStopConfirm}}</div>
+			 
+		  <button class="button signHeaderPrePreLastButton sign-menu-button" ng-click="onSaveSign()" ><i class="fa fa-2x fa-check"></i></button>
+		  <button class="button signHeaderPreLastButton sign-menu-button"><i class="fa fa-2x fa-comment-o"></i></button>
+		  <button class="button headerLastButton sign-menu-button" ng-click="openMenu($event)"><i class="fa fa-2x fa-ellipsis-v"></i></button>
+			 
+		</div>
+		
+	<div class ="stop-overview">
+		<div class = "label-overview">
+			<p>You received</p>
+			<p ng-hide="summary.nbDeviations == 0">with</p>
+			<p>of a total</p>
+		</div>
+		<div class = "result-overview">
+			<p><span class="green-counter">{{summary.nbHandledShipments}}</span> shipments, <span class="green-counter">{{summary.nbHandledItems}}</span> items</p>
+			<p ng-hide="summary.nbDeviations == 0"><span class="orange-counter">{{summary.nbDeviations}}</span> deviations</p>
+			<p>{{summary.nbTotalShipments}} shipments, {{summary.nbTotalItems}} items</p>
+		</div>
+	</div>
+	<div id="signatureLabel">Signature</div>
+	<div id="signatureContainer">
+		<canvas id="signature"></canvas>
+	</div>
+	
+	
+	<div class="bar bar-footer sign-footer">
+		 <input type="text" placeholder="{{messages.signStop.receiverName}}" id="receiverName" ng-model="receiver.printedName">
+		  <a class="button" id="saveButton" ng-click="submitPrintedName()" ng-bind="messages.signStop.save"></a>
+		  <button id ="agenda-button" class="button"><i class="fa fa-2x fa-book"></i></button>
+	</div>
+	
+	
+	</ion-content> 
+</ion-view>

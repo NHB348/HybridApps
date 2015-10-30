@@ -1,0 +1,53 @@
+
+#logoContainer  when (@rho = 1){
+	background-image: url('/../@{url-relative}/menu/logo-bg.png');
+}
+#logoContainer  when not (@rho = 1){
+	background-image: url('/@{url-relative}/menu/logo-bg.png');
+}
+#logoContainer {
+	background-repeat: no-repeat;
+	height: (150 * @dpi_mult) * 1px;
+}
+#driverName {
+	color: white;
+	.ratio-value(20px);
+	position: absolute;
+    top: 100px;
+    left: 30px;
+}
+#logoutBtn {
+	color: @dsv-orange-4;
+	position: absolute;
+    top: (125 * @dpi_mult) * 1px;
+    left: (135 * @dpi_mult) * 1px
+}
+.menu-item-icon {
+	.ratio-value(18px) !important;
+	color: @dsv-blue-4;
+}
+a.item-icon-left {
+	color: @dsv-primary;
+	
+	&.disabled {
+		 color: #AAAAAA !important;
+    	cursor: default;
+    	pointer-events: none;
+    	text-decoration: none;
+	}
+}
+#menu-status-settings {
+	color: @dsv-blue-4;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.menu-item-text {
+	.ratio-value(14px);
+	color: @dsv-blue-4;
+	font-weight: 400;
+}
+.menu-item-text-details {
+    .ratio-value(14px) !important;
+    color:  @dsv-blue-4 !important;
+    font-weight: 400;
+}

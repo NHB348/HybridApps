@@ -1,0 +1,16 @@
+<ion-modal-view id="stops-popup-unknown-modal"
+	style="width: 100%; left: 0%; right: 0%; bottom: 0%">
+   <ion-header-bar class="stops-popover-menu-item stops-popup-sort-header">
+     <h1>Unknown item scanned</h1>
+   </ion-header-bar>
+   <ion-content scroll="false" class="stops-popover-menu-content">
+     <div class="list">
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onUnknownItemAction('add-to-existing-stop')">
+			<i class="icon fa fa-map-marker stops-poppup-menu-item-icon"></i>Add to existing stop</a>
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onUnknownItemAction('create-stop')">
+			<i class="icon fa fa-plus-circle stops-poppup-menu-item-icon green-color-4"></i>Create stop</a>
+		<a class="item item-icon-left stops-popup-sort-list-item" href="#" ng-click="onUnknownItemAction('get-stop')">
+			<i class="icon fa fa-cloud-download stops-poppup-menu-item-icon blue-color-4"></i>Get stop</a>
+	</div>
+   </ion-content>
+ </ion-modal-view>

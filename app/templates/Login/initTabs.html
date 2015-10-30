@@ -1,0 +1,16 @@
+<ion-tabs class="tabs-striped tabs-left tabs-color-dark tabs-middle" id="InitTabs" ng-controller="InitTabsController">
+  <!-- user Tab -->
+  <ion-tab icon="fa fa-check" title="user" href="#/init/login" on-select="returnToLogin()">
+    <ion-nav-view name="login-tab"></ion-nav-view>
+  </ion-tab>
+
+  <!-- vehicle Tab -->
+  <ion-tab icon="fa fa-check" title="vehicle" href="#/init/vehicle" disabled="selectionModeVehicle == true ? 'disabled' : ''" on-select="returnToVehicle()">
+    <ion-nav-view name="vehicle-tab"></ion-nav-view>
+  </ion-tab>
+  
+    <!-- route Tab -->
+  <ion-tab icon="fa fa-check" title="transp./route" href="#/init/route" class="disabled" on-select="changeArrowPosition(2)">
+    <ion-nav-view name="route-tab"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

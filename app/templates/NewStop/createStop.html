@@ -1,0 +1,76 @@
+<ion-view data-name="CreateStop">
+	<ion-content scroll="false">
+		<div class="bar bar-header stop-create-header" style="z-index: 100">
+		  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-2x fa-arrow-left"></i></button>
+		  <h1 class="title">{{title}}</h1>
+		  <button class="button headerPreLastButton menu-button"
+		  	ng-click="onGotoDetails()"><i class="fa fa-2x fa-info-circle"></i></button>
+		  <button class="button headerLastButton menu-button"
+		  	ng-click="onCreateStop()"><i class="fa fa-2x fa-check"></i></button>
+		</div>
+
+		<div class="list stop-handling-header" ng-show="id == undefined">
+		    <div class="item item-icon-right stop-handling-header-content">
+		      	<h2>{{stop.name}}</span>
+		      	<p>{{stop.shipment.groups.length}} {{messages.shipments}}</span>
+		    </div>
+		</div>
+
+        <div class="stops-inbox-scan-content" style="z-index: 100">
+            <div class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="fa fa-lg fa-barcode placeholder-icon" on-tap="scanBarcode()"></i>
+                        <input type="text" id="scanCreateEnterInput" ng-model="data.itemCode" placeholder="{{messages.scanEnterItems}}">
+                    </label>
+                    <button class="button uppercase" id="createAddButton"
+                        ng-click='onAddScannedItem()'>{{messages.add}}</button>
+                </div>
+            </div>
+        </div>
+
+		<div class="list stop-unallocated-group">
+		    <a class="item item-icon-left item-avatar item-icon-right stop-create-groups-item stop-create-groups-item-nonwhite">
+		    	<i class="icon stop-create-groups-item-left-icon" ng-click="onSelectStopType()">
+					<i class="fa fa-question" ng-show="type == 0"></i>
+					<span class="dsv-pickup" ng-show="type == 1"></span>
+					<span class="dsv-delivery" ng-show="type == 2"></span>
+				</i>
+		      	<h2>{{messages.unallocatedItems}}</h2>
+			    <p>{{messages.unallocatedItemsSubtext}}</p>
+			    <i class="icon stop-handling-ban" ng-class="(stop.status != 'done') ? 'not-done' : ''">
+			        <label>
+						<input ng-change="onDeviateAll()" type="checkbox"
+						 ng-show="currentItems.length > 0" ng-model="deviateAll"
+						 ng-disabled="stop.status == 'done'"></label></i>
+		    </a>
+		</div>
+
+		<div class="list stop-create-groups">
+		    <div class="item item-icon-left item-icon-right stop-create-groups-item" ng-repeat="item in currentItems track by $index"
+		    	ng-class="(item.isDeviated == true ? 'is-deviated' : (item.isHandled == true ? 'is-handled' : 'dark-grey-color'))">
+	    		<i class="icon stop-create-groups-item-left-icon">
+		      	<label>
+		      		<input type="checkbox" ng-model="item.isHandled"
+		      	 		ng-change="onHandleItem(item)"
+		      	 		class="stop-handling-checkbox"></label>
+		      	</i>
+		      	<h2>{{item.code}}</h2>
+			    <p>{{item.reason}}</p>
+				<i class="icon stop-handling-ban" ng-class="(stop.status != 'done') ? 'not-done' : ''">
+					<i class="icon stop-handling-photo fa fa-camera "
+					   ng-show='item.isDeviated == true'
+					   ng-class="item.deviationPhotos.length > 0 ? 'blue-color-4' : 'light-grey-color-7'"
+					   ng-click='takeDeviationPhoto(item)'></i>
+					<label><input ng-change="onDeviateItem(item)" type="checkbox" ng-model="item.isDeviated"></label></i>
+		    </div>
+		</div>
+
+		<div class="stop-create-shipment-content center" style="z-index: 100" ng-show="id==undefined">
+			<button class="button" id="shipmentSiteAddButton"
+				ng-click='onAddShipmentOrSite()'>{{messages.shipmentSite}}</button>
+        </div>
+
+		<list-Pager />
+	</ion-content>
+</ion-view>

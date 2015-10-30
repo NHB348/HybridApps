@@ -1,0 +1,32 @@
+.appstatus-header {
+    border-bottom: 1px solid @dsv-grey-light-4 !important;
+}
+.appstatus-header-text {
+	.ratio-value(18px);
+    margin-left: 20px;
+    height: (48 * @dpi_mult) * 1px;
+    line-height: (48 * @dpi_mult) * 1px;
+    width: 100%;
+}
+
+#statusList, #settingsList, #settingsLangList {
+	padding-top: (48 * @dpi_mult - 1) * 1px !important;
+	padding-left: (16 * @dpi_mult) * 1px !important;
+}
+
+#statusList .item,
+#settingsList .item,
+#settingsLangList .item {
+	border-left: none
+}
+
+#statusList .item h2 {
+	color: @dsv-grey-dark-5 !important;
+}
+
+#settingsList div.item-icon-left {
+    padding-left: 44px !important;
+}
+#settingsList i.menu-item-icon {
+    left: 0px !important;
+}

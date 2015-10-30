@@ -1,0 +1,131 @@
+.sign-header {
+    border-bottom: 1px solid @dsv-grey-light-4 !important;
+    color: @dsv-primary !important;
+}
+.sign-header-text {
+	.ratio-value(18px);
+    margin-top: (17 * @dpi_mult) * 1px;
+    height: (48 * @dpi_mult) * 1px;
+    color: @dsv-primary;
+}
+
+.signHeaderPreLastButton when (@dpi = 228.57) {
+	position:absolute; 
+	right: (40*@dpi_mult)*1px;
+}
+.signHeaderPreLastButton when not (@dpi = 228.57) {
+	position:absolute; 
+	right: (40*@dpi_mult)*1px;
+}
+.signHeaderPrePreLastButton when (@dpi = 228.57) {
+	position:absolute; 
+	right: (80*@dpi_mult)*1px;
+}
+.signHeaderPrePreLastButton when not (@dpi = 228.57) {
+	position:absolute; 
+	right: (80*@dpi_mult)*1px;
+}
+.sign-menu-button {
+	.menu-button;
+    .primary-color;
+}
+.pod-method-label{
+	white-space: normal;
+}
+.stop-overview{
+	margin: 0 auto;
+	margin-top: (48*@dpi_mult)*1px;
+	border-bottom: 1px solid @dsv-grey-light-4 !important;
+}
+.label-overview{
+	width: 39%;
+	display: inline-block;
+	padding-top: (20 * @dpi_mult) * 1px !important;
+	padding-bottom: (20 * @dpi_mult) * 1px !important;
+	padding-left: (30 * @dpi_mult) * 1px !important;
+	padding-right: (8 * @dpi_mult) * 1px !important;
+	text-align: right;
+	color: @dsv-grey-light-7;
+	line-height: 36px;
+	white-space: nowrap;
+	font-size: 16px;
+	font-weight: 500;
+}
+.result-overview {
+	width: 60%;
+	display: inline-block;
+	padding-top: (20 * @dpi_mult) * 1px !important;
+	padding-bottom: (20 * @dpi_mult) * 1px !important;
+	padding-left: (8 * @dpi_mult) * 1px !important;
+	padding-right: (30 * @dpi_mult) * 1px !important;
+	text-align: left;
+	color: @dsv-grey-dark-5;
+	line-height: 36px;
+	white-space: nowrap;
+	font-size: 16px;
+	font-weight: 500;
+}
+.result-overview p, .label-overview p{
+	margin: 0px;
+}
+.green-counter{
+	color: @dsv-green-4;
+}
+.orange-counter{
+	color: @dsv-orange-4;
+}
+.sign-footer{
+	z-index: 100; 
+	background-color: @dsv-primary;
+}
+#signStopView{
+	background-color: @dsv-primary !important;
+}
+#signatureLabel{
+   	color: @dsv-grey-light-7;
+   	padding-top: (10 * @dpi_mult) * 1px !important;
+	padding-left: (10 * @dpi_mult) * 1px !important;
+   	font-size: 14px;
+}
+#receiverName{
+	text-align: left;
+	background-color: @dsv-primary;
+	position:absolute; 
+	left: 0px;
+	padding: (20 * @dpi_mult) * 1px !important;
+	padding-left: (10 * @dpi_mult) * 1px !important;
+	color: white;
+	width: @documentWidth - 72*@dpi_mult * 1px;
+}
+#agenda-button{
+	color: white;
+	text-align: right;
+	position:absolute; 
+	right: 0px;
+	padding: (10 * @dpi_mult) * 1px !important;
+}
+#agenda-button:hover { 
+   color: white;
+}
+#receiverName::-webkit-input-placeholder {
+    font-style: italic !important;
+}
+#receiverName:-moz-placeholder {
+    font-style: italic !important;
+}
+#receiverName::-moz-placeholder {
+    font-style: italic !important;
+}
+#receiverName:-ms-input-placeholder {
+    font-style: italic !important;
+}
+#saveButton{
+	color: white;
+	background-color: @dsv-primary;
+	border: none;
+	position:absolute; 
+	right: (30*@dpi_mult)*1px;
+	padding: (8 * @dpi_mult) * 1px !important;
+	width: (48 * @dpi_mult) * 1px !important;
+	height: (48 * @dpi_mult) * 1px !important;
+}

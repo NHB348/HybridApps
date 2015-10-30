@@ -1,0 +1,83 @@
+.stops-inbox-header {
+    height: @headerHeight * 1px;
+    position: relative !important;
+    * { color: @dsv-primary; }
+}
+.stops-inbox-scan-content {
+    height: @headerHeight * 1px;
+    position: relative;
+}
+.stops-inbox-list {
+    max-height: (@documentHeight - 2 * @headerHeight) * 1px;
+    height: auto;
+    position: relative !important;
+}
+.stops-inbox-item {
+    padding: 0;
+	border-bottom-color: #f2f2f2 !important;
+	display: table;
+	width: 100%;
+    min-height: @stopListInboxItemHeight * 1px + 1px;
+}
+.stops-inbox-item td {
+    vertical-align: middle;
+}
+.item-inbox-type {
+    float: left;
+	background-color: #f2f2f2;
+	border-bottom-color: #f2f2f2 !important;
+	width: (48*@dpi_mult)*1px;
+	min-height: @stopListInboxItemHeight * 1px + 2px;
+	vertical-align: middle;
+    display: table-cell;
+}
+#inboxOKButton {
+    .ratio-value(16px);
+    color: @dsv-primary;
+    font-weight: 700;
+}
+#inboxGetButton {
+    .ratio-value(16px);
+    color: @dsv-green-4;
+    font-weight: 700;
+}
+#scanEnterInput {
+    .ratio-value(16px);
+    color: @dsv-primary;
+    width: 100%;
+    margin-left:(24 * @dpi_mult)*1px;
+}
+ i.stops-inbox-item-check input[type=checkbox] {
+     position: relative;
+     background-color: white;
+}
+/* to hide the checkbox itself */
+ i.stops-inbox-item-check label>input[type=checkbox]:before {
+     position: absolute;
+    background-color: #FFFFFF;
+    height: 100%;
+	width: 100%;
+    font-family: FontAwesome;
+    .ratio-value(22px) !important;
+    display: inline-block;
+    content:"\f1db";
+    letter-spacing: 10px;
+     color: @dsv-primary;
+}
+/* space between checkbox and label */
+ i.stops-inbox-item-check label>input[type=checkbox]:checked:before {
+     font-family: FontAwesome;
+    display: inline-block;
+    content:"\f058";
+    letter-spacing: 5px;
+    color: @dsv-green-4;
+}
+
+div.stop-inbox-name span {
+    .ratio-value(18px);
+	display:inline-block;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+    width: (@documentWidth - (48+48)*@dpi_mult)*1px;
+}

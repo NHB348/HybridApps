@@ -1,0 +1,8 @@
+rhodes_path='C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.2.2.2'
+app_version='1.0'
+app_name='RhoMobileApplication2'
+reload_app_changes=1
+debug_port=
+debug_host='127.0.0.1'
+platform='wm'
+ext_path=C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.2.2.2/lib/commonAPI/coreapi;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.2.2.2/lib/extensions/json;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoconnect-client-4.1.1/lib/../ext/rhoconnect-client;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/rhoelementsext;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/motoapi;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/rhoelements;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.2.2.2/lib/commonAPI/mediacapture;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/symboldevice;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/barcode;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/indicators;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/cardreader;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/signature;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-5.1.1.1/libs/hardwarekeys;C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-5.2.2.2/lib/commonAPI/sensor;

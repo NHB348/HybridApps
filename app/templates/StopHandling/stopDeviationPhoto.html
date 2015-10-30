@@ -1,0 +1,21 @@
+<ion-view data-name="StopDeviationPhoto"> 
+    <ion-content scroll="false">
+		<div class="bar bar-header stop-deviation-photo-header" style="z-index: 100">
+            <button class="button menu-button" ng-click='goBack(true)'><i class="fa fa-2x fa-close"></i></button>
+            <h1 class="title"></h1>
+            <button class="button headerPrePreLastButton menu-button"
+                    ng-click='onRecapturePhoto()'><i class="icon-redo-photo"></i></button>
+            <button class="button headerPreLastButton menu-button"
+                    ng-click='onCapturePhoto()'><i class="icon-add-photo"></i></button>
+            <button class="button headerLastButton menu-button" ng-click='onAcceptDeviationsPhotos()'><i class="fa fa-2x fa-check"></i></button>
+        </div>
+		
+		<div class="list stop-deviation-photo-list">
+		    <div class="item stop-deviation-photo-item"
+                 ng-repeat="deviationPhoto in deviationPhotos track by $index">
+	    		<img ng-src="data:image/png;base64,{{deviationPhoto.data}}" alt="deviation Photo" />
+		    </div>
+		</div>
+	</ion-content> 
+        <horizontal-Pager />
+</ion-view>

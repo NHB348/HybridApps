@@ -1,0 +1,39 @@
+<ion-view data-name="AppStatus">
+	<ion-content scroll="false">
+		<div class="bar bar-header appstatus-header" style="z-index: 100">
+			<button class="button menu-button" ng-click='goBack()'>
+				<i class="fa fa-lg fa-arrow-left blue-color-4"></i>
+			</button>
+			<div class="blue-color-4 appstatus-header-text">Status</div>
+		</div>
+		<div class="list" id="statusList">
+			<div class="item">
+				<p>Server connection</p>
+				<h2>
+					<span>{{connected}}</span> {{hours}} hours ago
+				</h2>
+			</div>
+			<div class="item">
+				<p>Stops sent/received</p>
+				<h2>Sent {{sentStops}} of {{totalSentStops}} / Received
+					{{receivedStops}} of {{totalReceivedStops}}</h2>
+			</div>
+			<div class="item">
+				<p>Application</p>
+				<h2>DSV Driver {{version}}</h2>
+			</div>
+			<div class="item">
+				<p>Framework</p>
+				<h2>{{framework}}</h2>
+			</div>
+			<div class="item">
+				<p>Cellular data</p>
+				<h2>Edge</h2>
+			</div>
+			<div class="item">
+				<p>GPS</p>
+				<h2>{{GSPCoords}}</h2>
+			</div>
+		</div>
+	</ion-content> 
+</ion-view>

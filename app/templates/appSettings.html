@@ -1,0 +1,21 @@
+<ion-view data-name="AppSettings"> 
+	<ion-content scroll="false">
+		<div class="bar bar-header appstatus-header" style="z-index: 100">
+			<button class="button menu-button" ng-click='goBack()'>
+				<i class="fa fa-lg fa-arrow-left blue-color-4"></i>
+			</button>
+			<div class="blue-color-4 appstatus-header-text">{{messages.settingsText}}</div>
+		</div>
+		<div class="list" id="settingsList">
+			<div class="item item-icon-left" ng-repeat="setting in settings track by $index">
+			<a href="" ng-click='goToSetting(setting.key)'>
+				<i class="icon fa fa-cog menu-item-icon"></i>
+				<p>{{messages.settings[setting.key]}}</p>
+				<h2>
+					{{setting.value}}
+				</h2>
+			</a>
+			</div>
+		</div>
+	</ion-content> 
+</ion-view>

@@ -1,0 +1,92 @@
+{
+	"deviations": [
+    {
+        "id": 1,
+        "type": 1,
+        "value": "D",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 2,
+        "type": 1,
+        "value": "NZ",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 3,
+        "type": 1,
+        "value": "M",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 4,
+        "type": 1,
+        "value": "IP",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 5,
+        "type": 1,
+        "value": "Z",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 6,
+        "type": 1,
+        "value": "Z1",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 7,
+        "type": 1,
+        "value": "Z2",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 8,
+        "type": 2,
+        "value": "D",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 9,
+        "type": 2,
+        "value": "IP",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 10,
+        "type": 2,
+        "value": "M",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    },
+    {
+        "id": 11,
+        "type": 2,
+        "value": "Z1",
+        "isEnabledForItem": "true",
+        "isEnabledForShipment": "true",
+        "isEnabledForStop": "true"
+    }
+ ]   
+}

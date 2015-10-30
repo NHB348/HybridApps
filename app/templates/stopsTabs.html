@@ -1,0 +1,16 @@
+<ion-tabs class="tabs-striped tabs-top tabs-color-dark">
+  <!-- Todo Tab -->
+  <ion-tab title="TODO {{todoCount}}" href="#/stops/todo/todo">
+    <ion-nav-view name="todo-tab"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Cancels Tab -->
+  <ion-tab title="CANCELED" href="#/stops/canceled/canceled" disabled="isSelectionMode==true ? 'disabled' : ''">
+    <ion-nav-view name="canceled-tab"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Done Tab -->
+  <ion-tab title="DONE {{doneCount}}" href="#/stops/done/done" disabled="isSelectionMode==true ? 'disabled' : ''">
+    <ion-nav-view name="done-tab"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

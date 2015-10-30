@@ -1,0 +1,11 @@
+{
+	"settings": [
+        { "key": "10000", "value": "English (en-GB)" },
+	    { "key": "10100", "value": "Yes" },
+	    { "key": "10200", "value": "Signature" },
+	    { "key": "10300", "value": "5" },
+	    { "key": "10400", "value": "Yes" },
+	    { "key": "10500", "value": "Yes" },
+	    { "key": "10600", "value": "Load Sequence (asc.)"}
+	]
+}

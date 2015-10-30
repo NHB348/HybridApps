@@ -1,0 +1,41 @@
+/**************** pager *****************/
+.pager {
+	.ratio-value(@pagerButtonGap, right);
+	.ratio-value(@pagerButtonGap, bottom);
+	position: absolute; 
+	background-color: transparent;
+	z-index: 100;
+	color: blue;
+	opacity: 1;
+	width: (60*@dpi_mult)*1px;
+}
+.pagerButton {
+	width: @pagerButtonSize*1px;
+	height: @pagerButtonSize*1px;
+	border-radius: (20*@dpi_mult)*1px;
+	margin-top: 5px;
+	box-shadow: 2px 5px 5px #888888;
+	opacity: .75;
+
+	> * {
+		line-height: (40*@dpi_mult)*1px;
+		/*Alignment hack*/
+		margin-top: (1*@dpi_mult)*1px;
+	}
+}
+
+.pagerButtonUp {
+  background-color: white;
+  border: 2px solid @dsv-blue-4 !important;
+}
+.pagerButtonDown {
+  background-color: @dsv-blue-4;
+}
+.pagerButtonArrowUp {
+	/*Alignment hack*/
+	margin-top: (-1*@dpi_mult)*1px;
+	color: @dsv-blue-4;
+}
+.pagerButtonArrowDown {
+	color: white;
+}

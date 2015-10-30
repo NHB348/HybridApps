@@ -1,0 +1,40 @@
+<div class="bar bar-header stopdetails-header" style="z-index: 100">
+  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-lg fa-times stopdetails-close-btn"></i></button>
+  <table>
+  	<tr><td><div class="stopsdetails-title"><span>{{stop.name}}</span></div></td></tr>
+  	<tr><td><div class="stopdetails-types">{{stopTypes}}</div></td></tr>
+  </table>
+</div>
+
+<ion-view>
+	<ion-content>
+		<br>
+		<label class="uppercase info-title">Services</label>
+		<table class="info-servicesTable">
+			<tr ng-repeat="service in mvvm.services track by $index">
+				<td class="info-serviceType"><label>{{service.type}}</label></td>
+				<td><label class="info-serviceType-value">{{service.uivalue}}</label></td>
+			</tr>
+			<tr>
+				<td class="info-serviceType"><label>Open hours:</label></td>
+				<td><label class="info-serviceType-value">{{stop.openHours}}</label></td>
+			</tr>
+			<tr>
+				<td class="info-serviceType"><label>Planned stop time:</label></td>
+				<td><label class="info-serviceType-value">{{stop.plannedStopTime}}</label></td>
+			</tr>
+		</table>
+		<br>
+		<label class="uppercase info-title">Shipment</label><br>
+		<div class="info-instructions">{{mvvm.comment}}</div>
+		
+		<table class="info-shipment-table">
+			<tr>
+				<td class="info-shipment"><div class="center">Items</div><div class="center">{{mvvm.stopItemsCount}}</div></td>
+				<td class="info-shipment"><div class="center">Weight</div><div class="center">{{mvvm.weight.value}} {{mvvm.weight.unit}}</div></td>
+				<td class="info-shipment"><div class="center">Volume</div><div class="center">{{mvvm.volume.value}} {{mvvm.volume.unit}}</div></td>
+				<td class="info-shipment"><div class="center">LDM</div><div class="center">{{mvvm.LDM}}</div></td>
+			</tr>
+		</table>
+	</ion-content>
+</ion-view>

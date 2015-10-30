@@ -1,0 +1,15 @@
+<div class="bar bar-header stopdetails-header" style="z-index: 100">
+  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-lg fa-times stopdetails-close-btn"></i></button>
+  <table>
+  	<tr><td><div class="stopsdetails-title">{{stop.name}}</div></td></tr>
+  	<tr><td><div class="stopdetails-types">{{stopTypes}}</div></td></tr>
+  </table>
+</div>
+
+<ion-view>
+	<ion-content>
+		<br>
+		<label class="uppercase info-title">Instructions</label><br>
+		<div class="info-instructions">{{stop.instructions}}</div>
+	</ion-content>
+</ion-view>

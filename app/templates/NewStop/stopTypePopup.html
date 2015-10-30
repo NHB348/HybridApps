@@ -1,0 +1,13 @@
+<ion-modal-view class="modal-as-nav" id="stops-type-popup">
+   <ion-header-bar class="stops-popover-menu-item">
+     <h1>{{messages.selectStopType}}</h1>
+   </ion-header-bar>
+   <ion-content scroll="false" class="stops-popover-menu-content">
+     <div class="list">
+		<a class="item item-icon-left stops-popup-sort-list-item uppercase" href="#" ng-click="onStopTypeSelected(1)">
+			<span class="icon dsv-pickup stops-poppup-menu-item-icon"></span>{{messages.pickup}}</a>
+		<a class="item item-icon-left stops-popup-sort-list-item uppercase" href="#" ng-click="onStopTypeSelected(2)">
+			<span class="icon dsv-delivery stops-poppup-menu-item-icon"></span>{{messages.delivery}}</a>
+	</div>
+   </ion-content>
+ </ion-modal-view>

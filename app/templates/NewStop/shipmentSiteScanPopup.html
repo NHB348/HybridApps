@@ -1,0 +1,24 @@
+<ion-modal-view id="siteId-scan-modal">
+   <ion-header-bar class="stops-popover-menu-item stops-popup-sort-header">
+     <h1>{{shipmentSiteScanPopupTitle}}</h1>
+   </ion-header-bar>
+   <ion-content scroll="false">
+    <div>
+    	<label class="item item-input">
+   			<span class="fa fa-barcode light-grey-color-4" on-tap="scanSiteIdBarcode()"></span>
+            <input type="text" placeholder="Reference ID" ng-model="scanModalData.data">
+        </label>
+        <label class="error">{{siteIdError}}</label>
+    </div>
+    <div>
+    	<table>
+    		<tr>
+    			<td><button id="cancelButton" class="button upercase primary-color" ng-click="onCancelSiteShipment()">CANCEL</button></td>
+    			<td><button
+    						class="button uppercase blue-color-4"
+    						ng-click="onAcceptShipmentSite()">OK</button></td>
+    		</tr>
+    	</table>
+    </div>
+   </ion-content>
+ </ion-modal-view>

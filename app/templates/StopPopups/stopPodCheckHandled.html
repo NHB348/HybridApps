@@ -1,0 +1,13 @@
+<ion-modal-view id="stopAllHandled" class="stopPodCheck modal-rounded modal-centered">
+    <ion-header-bar>
+        <h3>{{messages.unhandledItemsTitle}}</h3>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <p>{{messages.unhandledItemsDescription}}</p>
+
+        <div class="list noBorder">
+            <a class="item" ng-click="onDeviateUnhandled()">{{messages.unhandledItemsYes}}</a>
+            <a class="item" ng-click="closePodCheckModal('unhandled')">{{messages.unhandledItemsBack}}</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,290 @@
+{
+  "stops": [
+    {
+      "id": "14e6c2ee-e938-bbb0-05c9-a6019c0595d3",
+      "status": "todo",
+      "isSplited": false,
+      "name": "1CONSUMPTION ERGONOMICS LTD",
+      "address": "Nordgaden 1",
+      "postalCode": "DK-2860",
+      "openHours": "10:00 - 19:00",
+      "plannedStopTime": "12:30 - 14:15",
+      "instructions": "Please confirm that all appropiate safety precautions are taken before picking up the consigment.",
+      "shipment": {
+        "groups": [
+          {
+            "name": "GRSUP-00351",
+            "comment": "Freight prepaid",
+            "type": 1,
+            "weight": {
+              "value": 12,
+              "unit": "kg"
+            },
+            "volume": {
+              "value": 12,
+              "unit": "m3"
+            },
+            "LDM": 0.8,
+            "services": [
+              {
+                "type": "hazardous",
+                "uivalue": "UN1157 3 III DIISOBUTYL KETONE"
+              },
+              {
+                "type": "call",
+                "uivalue": "+45 123 12312 212"
+              },
+              {
+                "type": "COD",
+                "value": "994",
+                "unit": "DDK"
+              },
+              {
+                "type": "receivePallet",
+                "value": "2",
+                "unit": "EUR-pallet"
+              },
+              {
+                "type": "leavePallet",
+                "value": "1",
+                "unit": "EUR-pallet"
+              },
+              {
+                "type": "Instructional Text",
+                "value1": "Some Instructional text"
+              }
+            ],
+            "items": [
+              {
+                "code": "00357065931232152120",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "00357065931232152121",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              }
+            ]
+          },
+          {
+            "name": "GRSUP-00350",
+            "comment": "Freight prepaid",
+            "type": 2,
+            "weight": {
+              "value": 12,
+              "unit": "kg"
+            },
+            "volume": {
+              "value": 12,
+              "unit": "m3"
+            },
+            "LDM": 0.8,
+            "services": [
+              {
+                "type": "call",
+                "uivalue": "+45 123 12312 212"
+              },
+              {
+                "type": "COD",
+                "value": "994",
+                "unit": "DDK"
+              },
+              {
+                "type": "receivePallet",
+                "value": "2",
+                "unit": "EUR-pallet"
+              }
+            ],
+            "items": [
+              {
+                "code": "00357065931232152122",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "00357065931232152123",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "00357065931232152124",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              }
+            ]
+          }
+        ]
+      },
+      "parties": [
+        {
+          "type": "Delivery",
+          "name": "PRODUCTION ERGONOMICS INC.",
+          "address1": "Østvejen 100",
+          "address2": "DK-2860 Søborg, DK"
+        },
+        {
+          "type": "Pickup",
+          "name": "PRODUCTION ERGONOMICS INC.",
+          "address1": "Østvejen 100",
+          "address2": "DK-2860 Søborg, DK"
+        },
+        {
+          "type": "Shiper",
+          "name": "DSV A/S",
+          "address1": "Litauen Allé 4",
+          "address2": "DK-2630 Taastrup, DK"
+        }
+      ],
+      "loadSequence": 1
+    },
+    {
+      "id": "24e6c2ee-e938-bbb0-05c9-a6019c0595d3",
+      "status": "todo",
+      "isSplited": false,
+      "name": "2CONSUMPTION ERGONOMICS LTD",
+      "address": "Nordgaden 1",
+      "postalCode": "DK-2860",
+      "openHours": "10:00 - 19:00",
+      "plannedStopTime": "12:30 - 14:15",
+      "instructions": "Please confirm that all appropiate safety precautions are taken before picking up the consigment.",
+      "shipment": {
+        "groups": [
+          {
+            "name": "GRSUP-00356",
+            "comment": "Freight prepaid",
+            "type": 2,
+            "weight": {
+              "value": 12,
+              "unit": "kg"
+            },
+            "volume": {
+              "value": 12,
+              "unit": "m3"
+            },
+            "LDM": 0.8,
+            "services": [
+              {
+                "type": "hazardous",
+                "uivalue": "UN1157 3 III DIISOBUTYL KETONE"
+              },
+              {
+                "type": "call",
+                "uivalue": "+45 123 12312 212"
+              },
+              {
+                "type": "COD",
+                "value": "994",
+                "unit": "DDK"
+              },
+              {
+                "type": "receivePallet",
+                "value": "2",
+                "unit": "EUR-pallet"
+              },
+              {
+                "type": "leavePallet",
+                "value": "1",
+                "unit": "EUR-pallet"
+              },
+              {
+                "type": "Instructional Text",
+                "value1": "Some Instructional text"
+              }
+            ],
+            "items": [
+              {
+                "code": "10357065931232152120",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "20357065931232152121",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              }
+            ]
+          },
+          {
+            "name": "GRSUP-00355",
+            "comment": "Freight prepaid",
+            "type": 2,
+            "weight": {
+              "value": 12,
+              "unit": "kg"
+            },
+            "volume": {
+              "value": 12,
+              "unit": "m3"
+            },
+            "LDM": 0.8,
+            "services": [
+              {
+                "type": "call",
+                "uivalue": "+45 123 12312 212"
+              },
+              {
+                "type": "COD",
+                "value": "994",
+                "unit": "DDK"
+              },
+              {
+                "type": "receivePallet",
+                "value": "2",
+                "unit": "EUR-pallet"
+              }
+            ],
+            "items": [
+              {
+                "code": "30357065931232152122",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "40357065931232152123",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              },
+              {
+                "code": "50357065931232152124",
+                "isHandled": false,
+                "isDeviated": false,
+                "reason": ""
+              }
+            ]
+          }
+        ]
+      },
+      "parties": [
+        {
+          "type": "Delivery",
+          "name": "PRODUCTION ERGONOMICS INC.",
+          "address1": "Østvejen 100",
+          "address2": "DK-2860 Søborg, DK"
+        },
+        {
+          "type": "Pickup",
+          "name": "PRODUCTION ERGONOMICS INC.",
+          "address1": "Østvejen 100",
+          "address2": "DK-2860 Søborg, DK"
+        },
+        {
+          "type": "Shiper",
+          "name": "DSV A/S",
+          "address1": "Litauen Allé 4",
+          "address2": "DK-2630 Taastrup, DK"
+        }
+      ],
+      "loadSequence": 3
+    }
+  ]
+}

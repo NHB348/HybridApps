@@ -1,0 +1,23 @@
+<ion-view data-name="StopDeviation"> 
+	<ion-content scroll="false">
+		<div class="bar bar-header stop-deviation-header" style="z-index: 100">
+		  <button class="button menu-button" ng-click='goBack()'><i class="fa fa-2x fa-arrow-left"></i></button>
+		  <h1 class="title">{{messages.deviationTitle}}{{typeStr}}</h1>
+            <button class="button headerLastButton menu-button" ng-click='onAcceptDeviations()'><i class="fa fa-2x fa-check"></i></button>
+        </div>
+		
+		<div class="list stop-deviation-list">
+		    <div class="item item-icon-left stop-deviation-list-item"
+                 ng-repeat="deviation in currentDeviations track by $index">
+	    		<i class="icon stop-deviation-list-item-left-icon">
+		      	   <label>
+                       <input type="checkbox" ng-model="deviation.isSelected" ng-change="onSelectDeviation(deviation)"
+		      	 		class="stop-handling-checkbox"></label>
+		      	</i>
+		      	<span>{{deviation.description}}</span>
+		    </div>
+		</div>
+        
+		<list-Pager />
+	</ion-content> 
+</ion-view>

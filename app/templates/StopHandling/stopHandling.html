@@ -1,0 +1,75 @@
+<ion-view data-name="StopHandling"> 
+	<ion-content scroll="false">
+		<div class="bar bar-header" style="z-index: 100">
+		  <button class="button menu-button" ng-click='onCancelHandling(stop.status)'><i class="fa fa-2x fa-arrow-left"></i></button>
+		  <h1 class="title"></h1>
+		  <button class="button headerPrePreLastButton menu-button" ng-click="onSaveHandling()"
+                  ng-hide="stop.status == 'done'" ><i class="fa fa-2x fa-check"></i></button>
+		  <a href="#/stop/info/{{stop.id}}/false"><button class="button headerPreLastButton menu-button"><i class="fa fa-2x fa-info-circle"></i></button></a>
+		  <button class="button headerLastButton menu-button" ng-click="openMenu($event)"><i class="fa fa-2x fa-ellipsis-v"></i></button>
+        </div>
+
+		<div class="list stop-handling-header">
+		    <div class="item item-icon-right stop-handling-header-content">
+		      	<h2>{{stop.name}}</span>
+		      	<p>{{stop.shipment.groups.length}} {{messages.shipments}}</span>
+			    <i class="icon fa" id="siteIDButton" 
+                   ng-class="(isSiteIdValid == false) ? 'fa-barcode' : 'fa-check green-color-4'"
+                   ng-show="stop.siteId != undefined"></i>
+			    <i class="icon stop-handling-ban" ng-class="(stop.status != 'done') ? 'not-done' : ''"><label><input type="checkbox" ng-model="deviateAll" ng-change="onDeviateAll()"></label></i>
+		    </div>
+		</div>
+
+		<div class="service-info-panel-wrapper" ng-show="extendedServices != undefined">
+			<div class="service-info-panel is-service item item-icon-left item-icon-right stop-handling-groups-item" ng-repeat="service in extendedServices">
+				<i class="icon stop-handling-groups-item-left-icon">
+		      	<label>
+		      		<input type="checkbox" ng-model="service.isHandled"
+	      				class="stop-handling-checkbox" ng-change="onHandleService()"
+		      			ng-disabled="stop.status == 'done'" ></label>
+		      	</i>
+				<h2>
+					<span>{{service.uivalue}}</span>
+				</h2>
+			</div>
+		</div>
+
+		<div class="list stop-handling-groups">
+		    <div class="item item-icon-left item-icon-right stop-handling-groups-item" ng-repeat="item in currentItems track by $index"
+		    	ng-class="item.isHeader == true ? 'is-header' : (item.isDeviated == true ? 'is-deviated' : (item.isHandled == true ? 'is-handled' : 'dark-grey-color'))">
+	    		<i class="icon stop-handling-groups-item-left-icon"><table class="center" ng-show="item.isHeader">
+					<tr>
+						<td>
+                            <div class="item-delivery-type" ng-show="_isDelivery(stop)">
+                                <span class="dsv-delivery"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-delivery-type" ng-show="_isPickup(stop)">
+                                <span class="dsv-pickup"></span>
+                            </div>
+                        </td>
+					</tr>
+				</table>
+		      	<label ng-show="!item.isHeader">
+		      		<input type="checkbox" ng-model="item.isHandled"
+		      	 		ng-show="!item.isHeader" ng-change="onHandleItem(item)"
+		      	 		class="stop-handling-checkbox" ng-disabled="stop.status == 'done'"></label>
+		      	</i>
+		      	<h2>{{(showCustomerIdMenuItem == true || item.customerId == undefined) ? item.code : item.customerId}}</h2> 
+			    <p ng-show="!item.isHeader">{{item.reason}}</p>
+			    <i class="icon stop-handling-ban" ng-class="(stop.status != 'done') ? 'not-done' : ''">
+                    <i class="icon stop-handling-photo fa fa-camera "
+                       ng-show='item.isDeviated == true'
+                       ng-class="item.deviationPhotos.length > 0 ? 'blue-color-4' : 'light-grey-color-7'"
+                       ng-click='takeDeviationPhoto(item)'></i>
+			        <label><input ng-change="onDeviateItem(item)" type="checkbox" ng-model="item.isDeviated" ng-disabled="stop.status == 'done'"></label></i>
+		    </div>
+		</div>
+        
+        <div class="accept-all-button-container center" ng-show="showAcceptAll">
+            <div ng-hide="stop.status == 'done'" class="center pagerButton accept-all-button" ng-click="onHandleAllManually()"><i class="fa fa-2x fa-check"></i></div>
+        </div>
+		<list-Pager />
+	</ion-content> 
+</ion-view>

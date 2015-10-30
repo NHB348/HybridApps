@@ -1,0 +1,11 @@
+<ion-popover-view id="stops-menu-popover" style="height: auto !important;">
+  <ion-content class="stops-menu-popover-content" scroll="false" style=" top: 0; position: relative;">
+    <div class="list">
+		<a ng-click='onActionSelected("toggleID")' class="item item-icon-left stops-popover-menu-item" a-disabled="disableCustomerIdMenuItem(stop)"><i class="icon fa fa-barcode stops-popover-menu-item-icon"></i>{{showCustomerIdOrItemCodeMenu()}}</a>
+		<a ng-click='onActionSelected("consolidate")' class="item item-icon-left stops-popover-menu-item stops-popover-menu-item-with-border-top" href="#" ng-hide="stop.status == 'done'"><i class="icon fa fa-map-marker stops-popover-menu-item-icon"></i>{{messages.groupWithStops}}</a>
+		<a ng-click='onActionSelected("move")' class="item item-icon-left stops-popover-menu-item" href="#" ng-hide="stop.status == 'done'"><i class="icon fa fa-cubes stops-popover-menu-item-icon" ></i>{{messages.moveShipments}}</a>
+		<a ng-click='onActionSelected("add")' class="item item-icon-left stops-popover-menu-item stops-popover-menu-item" href="#" ng-hide="stop.status == 'done'"><i class="icon fa fa-cube stops-popover-menu-item-icon"></i>{{messages.addItems}}</a>
+		<a ng-click='onActionSelected("cancel")' class="item item-icon-left stops-popover-menu-item-with-border-top" href="#" ng-hide="stop.status == 'done'"><i class="icon fa fa-ban stops-popover-menu-item-icon orange-color-4"></i>{{messages.cancelStop}}</a>
+    </div>
+  </ion-content>
+</ion-popover-view>

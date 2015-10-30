@@ -1,0 +1,21 @@
+ <div class="bar bar-header logo-dsv center hide-on-keyboard-open" style="z-index: 100"></div>
+
+<ion-view>
+    <ion-content class="login-content" padding="false" scroll="false">
+         
+        <form id="loginForm" class="center">
+            <ion-list class="center">
+            	<p><span class="fa fa-barcode" on-tap="scanBarcode('user')"></span>
+                <label class="item item-input center">
+                    <input type="text" class="center" placeholder="{{messages.login.username}}" id="username" ng-model="credentials.username" ng-change="changeCredentials()">
+                </label></p>
+               <p>  <span class="fa fa-barcode" on-tap="scanBarcode('pass')"></span>
+                <label class="item item-input center">
+                    <input type="password" class="center" placeholder="{{messages.login.password}}" id="password" ng-model="credentials.password" ng-change="changeCredentials()">
+                </label></p>
+            </ion-list>
+            <a class="button" id="exitButton" class="uppercase" ng-click="exit()" ng-bind="messages.login.exitButton"></a>
+            <button class="button uppercase" id="signInButton" ng-click="signIn()" ng-bind="messages.login.signIn" ng-disabled="isLoginDisabled"></button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-modal-view id="stops-popup-consolodate-modal"
+	style="width: 100%; left: 0%; right: 0%; bottom: 0%">
+   <ion-header-bar class="stops-popover-menu-item stops-popup-sort-header">
+     <h1>Select parent stop</h1>
+   </ion-header-bar>
+   <ion-content scroll="false" class="stops-popover-menu-content">
+     <div class="list">
+		<a ng-repeat="stop in selectionStops track by $index" class="item stops-popup-consolodate-list-item" href="#" ng-click="onParentStopSelected('{{stop.id}}', $event)">
+			<div>
+				<div class="uppercase stop-consolidate-name">{{stop.name}}</div>
+				<div class="stop-address">{{stop.address}}, {{stop.postalCode}}</div>
+			</div>
+		</a>
+	</div>
+   </ion-content>
+ </ion-modal-view>

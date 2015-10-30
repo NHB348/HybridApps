@@ -1,0 +1,14 @@
+<div class="hpager" ng-show="pager.count > 1">
+	<table class="center">
+		<tr>
+			<td><div class="center hpagerButton hpagerButtonLeft" ng-click="onPrev()">
+                <i class="fa fa-2x fa-angle-left hpagerButtonArrowLeft"></i></div></td>
+            <td ng-show="pager.showNumbers">
+                <div class="center hpagerText">
+                    <span class="center">{{pager.startIndex + 1}} of {{pager.count}}</span></td>
+                </div>
+            <td><div class="center hpagerButton hpagerButtonRight" ng-click="onNext()">
+                <i class="fa fa-2x fa-angle-right hpagerButtonArrowRight"></i></div></td>
+		</tr>
+	</table>
+</div>
